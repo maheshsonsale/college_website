@@ -1,0 +1,119 @@
+Virtual Campus Explorer (Vite + React) — To-Do List
+🔹 1. Project Setup
+ Create Vite + React project:
+
+bash
+Copy
+Edit
+npm create vite@latest virtual-campus-explorer --template react
+cd virtual-campus-explorer
+npm install
+ Install Tailwind CSS (recommended):
+
+bash
+Copy
+Edit
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+ Configure tailwind.config.js and add Tailwind to index.css
+
+ Set up folders:
+
+bash
+Copy
+Edit
+/src
+  /components
+  /pages
+  /assets
+  /data
+  /layouts
+  /context (if needed)
+🔹 2. Routing with React Router
+ Install React Router:
+
+bash
+Copy
+Edit
+npm install react-router-dom
+ Set up routes for:
+
+/ → Home
+
+/events
+
+/notices
+
+/courses
+
+/faculty
+
+/login
+
+/dashboard
+
+🔹 3. Build Pages
+Home (/)
+ Hero section
+
+ Navigation bar
+
+ Interactive campus map
+
+ Footer
+
+Events (/events)
+ Monthly calendar view
+
+ Load events from JSON (events.json)
+
+ Filter by department/date
+
+Notices (/notices)
+ Notice cards from notices.json
+
+ Search & filter
+
+Courses (/courses)
+ Show course cards with filters
+
+Faculty (/faculty)
+ Faculty directory (card layout)
+
+ Filter by department
+
+Login (/login)
+ Simple login UI (no backend)
+
+ Navigate to dashboard on submit
+
+Dashboard (/dashboard)
+ Timetable
+
+ Notices
+
+ Notes
+
+ Profile editor (use localStorage)
+
+🔹 4. Core Features
+ 🌗 Dark/Light Mode Toggle (with Tailwind and localStorage)
+
+ 🌐 Language Toggle (Hindi/English via JSON translations)
+
+ 📦 Use localStorage for:
+
+Login session
+
+Theme preference
+
+Profile data
+
+🔹 5. Bonus Features (Optional but Cool)
+ Chatbot using JavaScript + conditional rendering
+
+ AOS animations (npm install aos)
+
+ Loading screen or route transitions
+
+ Responsive layout with Tailwind Grid/Flex

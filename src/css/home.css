@@ -1,0 +1,260 @@
+.home-container{
+    background-color: #3d7085;
+}
+/* Home.css */
+
+.h2,.p{
+  color: #f9f9f9;
+}
+.hero {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.hero button {
+  margin: 0 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-btn {
+  background-color: #facc15;
+  color: #000;
+}
+.explore-btn:hover {
+  background-color: #c9a413;
+  color: #222121;
+}
+
+.login-btn {
+  background-color: #fff;
+  color: #1e3a8a;
+}
+
+.login-btn:hover {
+  background-color: #dedfe0;
+  color: #2e50ac;
+}
+.about-container{
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about, .features, .news, .contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h2,
+.features h2,
+.news h2,
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p,
+.news ul,
+.contact p {
+  font-size: 18px;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+}
+
+.features ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.news ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.news li {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+.map-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+.map-container {
+
+  display: inline-block;
+}
+
+.map-image {
+  width: 800px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#map-heading{
+  color: #f9f9f9;
+  padding: 25px 0;
+}
+
+/* .map-marker {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+} */
+
+#info-box {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  background: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/********** image slider*************** */
+.slider-container {
+  width: 100%;
+  height: 500px;
+  /* overflow: hidden; */
+}
+
+.slide {
+  display: none;
+  height: 100%; /* ✅ Add this */
+}
+
+.slide.active {
+  display: block;
+  height: 100%; /* ✅ Add this */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  cursor: pointer;
+}
+/* popupbox section */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -80%);
+  z-index: 1000;
+  border-radius: 8px;
+}
+.pop-log-btn{
+  width: 100px;
+  margin-top: 20px;
+}
+.pop-log-btn:hover{
+  background-color: #dedfe0;
+  color: #2e50ac;
+}
+/* massege section */
+.message-container {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 15px;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.message-container h2 {
+  color: rgb(19, 18, 18);
+  margin-bottom: 10px;
+}
+
+.marquee-wrapper {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-box {
+  display: inline-block;
+  text-align: center;
+  animation: float-up 15s linear infinite;
+}
+.marquee-box p {
+  margin: 0;
+  padding: 0;
+  color: rgb(15, 15, 15);
+  font-size: 20px;
+  margin-top: 14px;
+  cursor: pointer;
+   border-bottom: 1px solid #a19f9f; /* or any color you prefer */
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.message-container:hover .marquee-box {
+  animation-play-state: paused;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

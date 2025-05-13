@@ -1,0 +1,79 @@
+                                                                                                                   
+.college-events {
+  padding: 60px 20px;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.events-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.events-header h2 {
+  font-size: 2.8rem;
+  color: #1f2937;
+}
+
+.events-header p {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  scale: 1.05;
+}
+
+.event-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.event-info h3 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 4px 0;
+}
+
+.event-desc {
+  margin: 12px 0;
+  color: #374151;
+}
+
+.event-link {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}

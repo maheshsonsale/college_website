@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 18px;
+}
+.navbar-links {
+  display: flex;
+}
+
+.navbar-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* Hover Effect on Links */
+.navbar-link:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
