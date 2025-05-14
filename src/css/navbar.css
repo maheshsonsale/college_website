@@ -22,10 +22,13 @@
   text-decoration: none;
   color: white;
   font-size: 16px;
+  padding: 8px 15px;
 }
 
 /* Hover Effect on Links */
-.navbar-link:hover {
+.navbar-link:hover,.navbar-link.active {
   color: #f0f0f0;
-  text-decoration: underline;
+  background-color: #08407c;
+  border-radius: 5px;
 }
+
