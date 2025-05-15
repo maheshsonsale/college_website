@@ -12,6 +12,12 @@ import image3 from '../assets/sliderimages/3.jpg';
 import image4 from '../assets/sliderimages/4.jpg';
 import image5 from '../assets/sliderimages/5.jpg';
 import image6 from '../assets/sliderimages/6.jpg';
+
+// company logos
+import tcs from "../assets/companylogos/tcs.png"
+import infosis from "../assets/companylogos/info.png"
+import wipro from "../assets/companylogos/wipro.png"
+import cognizant from "../assets/companylogos/cognizant.png"
 function Home() {
   // map section
   // const [selectedPlace, setSelectedPlace] = useState(null);
@@ -24,6 +30,14 @@ function Home() {
   const popuphandler = () => {
     setIsVisible(false);
   };
+  // placement section data
+  const recruiters = [
+    { name: "TCS", logo: tcs },
+    { name: "Infosys", logo: infosis },
+    { name: "Wipro", logo: wipro },
+    { name: "Cognizant", logo: cognizant },
+  ];
+
 
   const handleSubmit = () => {
     if (!name || !mobile || !city) {
@@ -40,10 +54,10 @@ function Home() {
     setCity('');
     setIsVisible(false);
   };
-// why choose us animation Aos
+  // why choose us animation Aos
   useEffect(() => {
-  AOS.init({ duration: 1000, once: false });
-}, []);
+    AOS.init({ duration: 1000, once: false });
+  }, []);
   //image slider
 
   const images = [image1, image2, image3, image4, image5, image6];
@@ -86,8 +100,8 @@ function Home() {
 
         <h1>Welcome to Swami Vivekananda Vishwavidyalaya</h1>
         <p>Empowering Youth through Knowledge, Discipline, and Innovation</p>
-        <button className="explore-btn hero-btn"><Link to='/courses'> Explore Courses</Link></button>
-        <button className="login-btn hero-btn"><Link to='/login'>Student Login</Link></button>
+        <button className="explore-btn hero-btn" data-aos="fade-right"><Link to='/courses'> Explore Courses</Link></button>
+        <button className="login-btn hero-btn" data-aos="fade-left"><Link to='/login'>Student Login</Link></button>
       </section>
 
       {/* About Section */}
@@ -144,22 +158,65 @@ function Home() {
 
 
       {/* News Section */}
-      <section className="news">
-        <h2 className='h2'>Latest News & Events</h2>
-        <ul>
-          <li>📢 Admissions Open for 2025 Batch</li>
-          <li>🏆 NSS Team won 1st Prize at State-Level Camp</li>
-          <li>🎓 Convocation Ceremony on 20th July 2025</li>
-        </ul>
+
+      <section className="placement-cell">
+        <div className="placement-header">
+          <h2>Placement Cell</h2>
+          <p>
+            Our dedicated Placement Cell connects students with top recruiters and prepares them with
+            the skills and confidence they need to succeed in the corporate world. We ensure students
+            are equipped with resume building, mock interviews, aptitude training, and soft skills.
+          </p>
+        </div>
+
+        <div className="placement-grid">
+          <div>
+            <h3>Our Mission</h3>
+            <p>
+              To empower students with the necessary resources, training, and opportunities to achieve
+              their career goals and foster relationships with industry leaders.
+            </p>
+          </div>
+          <div>
+            <h3>Services Offered</h3>
+            <ul>
+              <li>Resume building & interview preparation</li>
+              <li>Technical and aptitude training sessions</li>
+              <li>Industry expert seminars and webinars</li>
+              <li>On-campus and virtual placement drives</li>
+              <li>Internship and job opportunity support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="recruiters-section">
+          <h3>Top Recruiters</h3>
+          <div className="recruiters">
+            {recruiters.map((rec, idx) => (
+              <div key={idx} className="recruiter-card">
+                <img src={rec.logo} alt={rec.name} />
+                <p>{rec.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="stats">
+          <div className="stat-card blue">
+            <h4>500+</h4>
+            <p>Students Placed</p>
+          </div>
+          <div className="stat-card green">
+            <h4>100+</h4>
+            <p>Recruiters Visited</p>
+          </div>
+          <div className="stat-card yellow">
+            <h4>12 LPA</h4>
+            <p>Highest Package</p>
+          </div>
+        </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="contact">
-        <h2 className='h2'>Contact Us</h2>
-        <p>📍 159 Swarn Bagh Colony, Indore (M.P)</p>
-        <p>📞 9039418742</p>
-        <p>📧 maheshsonsale159@gmail.com</p>
-      </section>
 
       {/* Popup Box Section */}
       {/* Popup Box Section */}
