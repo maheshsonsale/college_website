@@ -103,6 +103,39 @@ function Home() {
         <button className="explore-btn hero-btn" data-aos="fade-right"><Link to='/courses'> Explore Courses</Link></button>
         <button className="login-btn hero-btn" data-aos="fade-left"><Link to='/login'>Student Login</Link></button>
       </section>
+       {/* Popup Box Section */}
+      {/* Popup Box Section */}
+      {isVisible && (
+        <section className="popup">
+          <div className="popup-box">
+            <button className="popup-close" onClick={popuphandler}>×</button>
+            <h2 className="popup-title">Quick Enquiry</h2>
+            <input
+              className="popup-input"
+              type="text"
+              placeholder="Full Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              className="popup-input"
+              type="text"
+              placeholder="Mobile No."
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+            />
+            <input
+              className="popup-input"
+              type="text"
+              placeholder="City Name"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+            <button className="popup-btn" onClick={handleSubmit}>Submit</button>
+          </div>
+        </section>
+      )}
+
 
       {/* About Section */}
       <div className="about-container">
@@ -191,10 +224,10 @@ function Home() {
 
         <div className="recruiters-section">
           <h3>Top Recruiters</h3>
-          <div className="recruiters">
+          <div className="recruiters" >
             {recruiters.map((rec, idx) => (
               <div key={idx} className="recruiter-card">
-                <img src={rec.logo} alt={rec.name} />
+                <img src={rec.logo} alt={rec.name} data-aos="flip-left" data-aos-duration="4000" />
                 <p>{rec.name}</p>
               </div>
             ))}
@@ -218,39 +251,7 @@ function Home() {
       </section>
 
 
-      {/* Popup Box Section */}
-      {/* Popup Box Section */}
-      {isVisible && (
-        <section className="popup">
-          <div className="popup-box">
-            <button className="popup-close" onClick={popuphandler}>×</button>
-            <h2 className="popup-title">Quick Enquiry</h2>
-            <input
-              className="popup-input"
-              type="text"
-              placeholder="Full Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              className="popup-input"
-              type="text"
-              placeholder="Mobile No."
-              value={mobile}
-              onChange={(e) => setMobile(e.target.value)}
-            />
-            <input
-              className="popup-input"
-              type="text"
-              placeholder="City Name"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-            />
-            <button className="popup-btn" onClick={handleSubmit}>Submit</button>
-          </div>
-        </section>
-      )}
-
+  
     </div >
 
   </>
