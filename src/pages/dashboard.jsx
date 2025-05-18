@@ -1,8 +1,13 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import '../css/dashboard.css'; // Import your CSS file for styling
 function Dashboard() {
+  const location=useLocation()
+  const {name}=location.state || {}
   return (
     <div className="dashboard-container">
-       <div className="dashboard-container">
+      <div className="dashboard-container">
+      <h1 className="dashboard-title">Welcome {name}</h1>
       <h1 className="dashboard-title">College Admin Dashboard</h1>
 
       {/* Statistic Cards */}
